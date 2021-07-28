@@ -1,17 +1,54 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables
+# Typography
+# Layout
+# Utilities
+# Header
+# Footer
+# Element
+# Start
+# Work
+# Process
+# The company
+# Introduce
+# Sign up
+# Offer
+# We can do
+# Vesti bulum
+# Contact
+
+--------------------------------------------------------------*/
+
+/*-------------------------# Variables------------------------*/
+
 :root {
-	--blue: #2f43a9;
-	--gray: #555963;
-	--white: #ffffff;
-	--milk: #e3d8d4;
+    --blue: #2f43a9;
+    --gray: #555963;
+    --white: #ffffff;
+    --milk: #e3d8d4;
+}
+
+/*-------------------------# Typography------------------------*/
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-	font-family: "Lora", Arial, Tahoma, sans-serif;
-	font-size: 16px;
+    font-family: "Lora", Arial, Tahoma, sans-serif;
+    font-size: 16px;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+/*-------------------------# Layout------------------------*/
 
 .section-inner-wrapper {
 	max-width: 1220px;
@@ -19,180 +56,176 @@ body {
 	margin: auto;
 }
 
-/**********Header***********/
+/*-------------------------# Utilities------------------------*/
 
-#header-wraper {
-	width: 100%;
+.text-primary {
+    color: #2f43a9 !important;
 }
 
-#header {
-	position: absolute;
-	width: inherit;
-	height: 60px;
+.text-secondary {
+    color: #7d7572 !important;
 }
 
-#logo img {
-	max-height: 124px;
-	margin-left: -3rem;
+.text-white {
+    color: #ffffff;
 }
 
-/* #nav {
-	align-items: end;
-} */
-
-#menu {
-	display: inherit;
-}
-
-#toggle-button {
-	display: none;
-	margin-left: 70%;
-	margin-bottom: auto;
-	position: fixed;
-	top: 1%;
-	right: 13%;
-}
-
-#toggle-button i {
-	color: var(--blue);
-	font-size: 2rem;
-}
-
-.nav-item {
-	margin: 0 1.3rem;
-	width: max-content;
-}
-
-li.active>a {
-	color: var(--blue) !important;
-}
-
-.nav-link {
-	font-size: 16px;
-	color: var(--gray);
-	width: fit-content;
-}
-
-.buy-now {
-	color: var(--blue) !important;
-	font-weight: 700;
-}
-
-@media (max-width: 1238px) {
-	#toggle-button {
-		display: block;
-	}
-	#menu {
-		display: none;
-	}
-}
-
-@media (min-width: 1239px) {
-	#menu {
-		display: inherit !important;
-		background-color: inherit !important;
-		position: inherit !important;
-		top: inherit !important;
-		right: inherit !important;
-		width: inherit !important
-	}
-}
-
-/**********Main***********/
-
-#start {
-	background-image: url('../images/home_agency2_intro_bg.jpg');
-	background-position: center top;
-	padding-top: 340px;
-	padding-bottom: 230px;
-	background-repeat: no-repeat;
-}
-
-#start-wrapper {
-	margin-left: 50%;
-	width: 40%;
-}
-
-#start-wrapper {
-	color: var(--blue);
-}
-
-#start-wrapper {
-	font-size: 20px;
+.bg-primary {
+    background-color: #2f43a9 !important;
 }
 
 .no-line {
-	color: transparent;
-	border: 0;
-	margin-top: 25px;
+    color: transparent;
+    border: 0;
+    margin-top: 25px;
 }
 
-/**********Work***********/
+/*-------------------------# Header------------------------*/
+header {
+    z-index: 999;
+}
+
+#logo {
+    max-height: 124px;
+}
+
+.nav-item {
+    margin: 0 0.5rem;
+    width: max-content;
+}
+
+.nav-link {
+    color: #555963;
+    font-size: 16px;
+    width: fit-content;
+}
+
+.nav-item.active>.nav-link {
+    color: #2f43a9 !important;
+}
+
+.nav-item:hover>.nav-link {
+    color: #2f43a9 !important;
+}
+
+.buy-now {
+    color: var(--blue) !important;
+    font-weight: 700;
+}
+
+@media (max-width: 1200px) {
+	nav .menu {
+		width: 250px;
+        background-color: #eae1dd;
+    }
+}
+
+/*-------------------------# Footer------------------------*/
+
+footer {
+	background-color: var(--milk);
+	padding: 27rem 24% 1rem;
+	text-align: center;
+}
+
+@media (max-width: 992px) {
+	footer {
+        padding-top: 41rem;
+    }
+}
+
+@media (max-width: 576px) {
+	footer {
+        padding-top: 49rem;
+    }
+}
+
+@media (max-width: 380px) {
+	footer {
+        padding-top: 59rem;
+    }
+}
+
+
+/*-------------------------# Element------------------------*/
+
+.btn-primary {
+    background-color: #2f43a9;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #f7f1ef;
+    color: #2f43a9;
+}
+
+/*-------------------------# Start--------------------------*/
+
+#start {
+    background-image: url('../images/home_agency2_intro_bg.jpg');
+    background-position: center top;
+    padding-top: 340px;
+    padding-bottom: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.start__wrapper {
+    font-size: 20px;
+}
+
+/*-------------------------# Work-----------------------*/
 
 #work {
-	background-image: url('../images/home_agency2_sectionbg1.png');
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-color: #f7f1ef;
-	height: 386px;
+    background-image: url('../images/home_agency2_sectionbg1.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #f7f1ef;
 }
 
-.work-content {
-	position: absolute;
-	margin-left: 7%;
+.work__offer {
+    padding: 40px 30px;
+    background-color: var(--milk);
+    top: -70px;
+    position: relative;
 }
 
-.work-content-1 {
-	height: 131px;
-	padding: 40px;
-	background-color: var(--milk);
-	margin-top: -61px;
+.work__offer-question {
+    font-size: 1.5rem;
+    align-self: center;
 }
 
-.work-content-1__left {
-	color: var(--blue);
-	font-size: 1.5rem;
-	align-self: center;
+.work__content {
+    padding: 100px 0 120px;
 }
 
-.work-content-2 {
-	padding: 100px 0 120px;
+.work__content-left {
+    font-size: 2rem;
 }
 
-.work-content-2__left {
-	color: var(--blue);
-	font-size: 2rem;
+.work__content-right {
+    font-size: 1rem;
 }
 
-.work-content-2__right {
-	color: var(--blue);
-	font-size: 1rem;
-}
+/*-------------------------# Process----------------------*/
 
-/**********Process***********/
-
-#process {
-	height: 674px;
-}
-
-.process-content__leff {
+.process__content {
 	padding-top: 3rem;
 }
 
-.process-content__title {
-	color: var(--blue);
-}
-
-.process-content__description {
-	color: #7d7572;
-}
-
-.process-content__slide {
-	position: absolute;
+.process__slide {
+	position: relative;
 	margin-top: -5rem;
 }
 
-/**********The company***********/
+@media (max-width: 1200px) {
+	.process__slide {
+        position: relative;
+        margin-top: 3rem;
+    }
+}
+
+/*-------------------------# The company-----------------------*/
 
 .the-company__img-1 {
 	background-image: url('../images/home_agency2_image1.jpg');
@@ -242,15 +275,15 @@ li.active>a {
 
 .the-company__description blockquote {
 	margin: 0 69px 1rem;
-	color: var(--white);
+	color: #ffffff;
 }
 
 .the-company__sign {
 	text-align: center;
-	color: var(--white);
+	color: #ffffff;
 }
 
-/**********Introduce***********/
+/*-------------------------# Introduce-------------------------*/
 
 #introduce {
 	background-color: #eee5e1;
@@ -259,7 +292,7 @@ li.active>a {
 .introduce__slogan {
 	text-align: center;
 	color: var(--blue);
-	position: absolute;
+	position: relative;
 	margin-left: 7%;
 	padding: 2rem 0;
 	margin-top: -3rem;
@@ -267,21 +300,18 @@ li.active>a {
 }
 
 .introduce__content {
-	padding-top: 13rem;
+	padding-top: 7rem;
 }
 
 .brand__logo img {
 	max-width: 100%;
 	height: auto;
+    text-align: center;
 }
 
 .brand__title {
-	color: var(--blue);
+	color: #2f43a9;
 	text-align: center;
-}
-
-.brand__summary {
-	color: var(--gray);
 }
 
 .we-are {
@@ -291,18 +321,6 @@ li.active>a {
 	background-position: center;
 	padding: 0 15% 20px;
 	text-align: center;
-}
-
-.we-are__title {
-	color: var(--blue);
-}
-
-.we-are__summary {
-	color: var(--blue);
-}
-
-.we-are__content {
-	color: var(--gray);
 }
 
 .introduce__right img {
@@ -315,7 +333,7 @@ li.active>a {
 	padding-left: 0px;
 }
 
-/**********Sign up***********/
+/*-------------------------# Sign up-----------------------*/
 
 #sign-up {
 	padding-top: 140px;
@@ -328,26 +346,23 @@ li.active>a {
 	background-size: cover
 }
 
-.sign-up-box__img {
-	width: 100%;
-	height: auto;
+.sign-up__img {
+    background-image: url(../images/home_agency2_image4.jpg);
+    background-size: cover;
+    height: 501px;
 }
 
-.sign-up-box__right {
+.sign-up__box {
 	background-color: rgb(247, 241, 239);
 	background-image: url(../images/home_agency2_sectionbg1.png);
 	background-repeat: no-repeat;
 	background-position: center center;
-	height: auto;
+	height: 501px;
 	width: 100%;
-	padding: 7rem 4rem 0rem !important;
+	padding: 40px 10% 20px !important;
 }
 
-.sign-up-box__title {
-	color: var(--blue);
-}
-
-.sign-up-form {
+.sign-up__form {
 	margin-top: 3rem;
 }
 
@@ -355,25 +370,39 @@ li.active>a {
 	width: 100%;
 }
 
+/*-------------------------# Offer-----------------------*/
+
 .offer__link {
 	text-align: center;
 	font-size: 1.5rem;
+    padding: 4rem 0;
 }
 
 .offer__link--1 {
-	background-color: var(--milk);
-	padding: 4rem 0;
+	background-color: #e3d8d4;
+}
+
+.offer__link--1:hover {
+    background-color: #cec0ba;
 }
 
 .offer__link--2 {
 	background-color: #ae9d96;
-	padding: 4rem 0;
+}
+
+.offer__link--2:hover {
+    background-color: #99837b;
 }
 
 .offer__link--3 {
 	background-color: #464861;
-	padding: 4rem 0;
 }
+
+.offer__link--3:hover {
+    background-color: #353751;
+}
+
+/*-------------------------# We can do-----------------------*/
 
 #we-can-do {
 	padding-top: 140px;
@@ -390,7 +419,14 @@ li.active>a {
 	text-align: center;
 }
 
-/**********Vestu-bulum***********/
+@media (max-width: 992px) {
+	.we-can-do__img {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/*-------------------------# Vesti bulum-----------------------*/
 
 .section-divider {
 	width: 4rem;
@@ -425,23 +461,45 @@ li.active>a {
 	top: 18%;
 }
 
-/**********Contact***********/
 
-.send-message {
-	padding: 120px 33%;
-	text-align: center;
-	background-color: #f7f1ef;
+@media (max-width: 992px) {
+	.vesti-bulum__canvas-border {
+        width: 20%;
+        height: auto;
+    }
+
+    .vesti-bulum__image {
+        position: absolute;
+        width: 10%;
+        left: 45%;
+    }
+}
+
+/*-------------------------# Contact----------------------*/
+
+#contact {
+    background-color: #f7f1ef;
 	background-image: url('../images/home_agency2_sectionbg4.jpg');
-	background-repeat: no-repeat;
+    padding: 120px 0px;
+    background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: scroll;
 	background-size: cover;
 }
 
-/**********Footer***********/
-
-footer {
-	background-color: var(--milk);
-	padding: 15px 24%;
+.send-message {
 	text-align: center;
+}
+
+.contact-box {
+    background-color: #eee5e1;
+    position: absolute;
+    margin-top: 50px;
+    padding: 4rem;
+    width: inherit;
+}
+
+.contact-box__social-network {
+    font-size: 2rem;
+    margin: 0rem 0.5rem;
 }
